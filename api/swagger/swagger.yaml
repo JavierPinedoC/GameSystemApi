@@ -129,121 +129,121 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
-  /videogames:
-    x-swagger-router-controller: game.controller
-    get:
-      description: get the game list
-      operationId: getGames
-      parameters:
-        - name: name
-          in: query
-          type: string
-          required: false
-        - name: developer
-          in: query
-          type: string
-          required: false
-        - name: gamesystem
-          in: query
-          type: string
-          required: false
-        - name: genre
-          in: query
-          type: string
-          required: false
-        - name: year
-          in: query
-          type: number
-          required: false
-        - name: sort
-          in: query
-          type: string
-          required: false
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/GetVideoGameListResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
-    post:
-      description: add a new game system to the list
-      parameters:
-        - in: body
-          name: videogame
-          description: The videogame to create.
-          schema:
-            $ref: "#/definitions/VideoGame"
-      responses:
-        "201":
-          description: Success
-          schema:
-            $ref: "#/definitions/GetVideoGameResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
-  /videogames/{id}:
-    x-swagger-router-controller: game.controller
-    get:
-      description: get a videogmae
-      parameters:
-        - name: id
-          type: number
-          in: path
-          required: true
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/GetVideoGameResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
-    put:
-      description: update a video game
-      # define the parameters
-      parameters:
-        - name: id
-          description: videogame id
-          type: number
-          in: path
-          required: true
-        - in: body
-          name: videogame
-          description: The videogame to update.
-          schema:
-            $ref: "#/definitions/VideoGame"
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/GetVideoGameResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"  
-    delete:
-      description: delete a videogame
-      # define the parameters
-      parameters:
-        - name: id
-          description: videogame id
-          type: number
-          in: path
-          required: true
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/GeneralResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
+  # /videogames:
+  #   x-swagger-router-controller: game.controller
+  #   get:
+  #     description: get the game list
+  #     operationId: getGames
+  #     parameters:
+  #       - name: name
+  #         in: query
+  #         type: string
+  #         required: false
+  #       - name: developer
+  #         in: query
+  #         type: string
+  #         required: false
+  #       - name: gamesystem
+  #         in: query
+  #         type: string
+  #         required: false
+  #       - name: genre
+  #         in: query
+  #         type: string
+  #         required: false
+  #       - name: year
+  #         in: query
+  #         type: number
+  #         required: false
+  #       - name: sort
+  #         in: query
+  #         type: string
+  #         required: false
+  #     responses:
+  #       "200":
+  #         description: Success
+  #         schema:
+  #           $ref: "#/definitions/GetVideoGameListResponse"
+  #       default:
+  #         description: Error
+  #         schema:
+  #           $ref: "#/definitions/ErrorResponse"
+  #   post:
+  #     description: add a new game system to the list
+  #     parameters:
+  #       - in: body
+  #         name: videogame
+  #         description: The videogame to create.
+  #         schema:
+  #           $ref: "#/definitions/VideoGame"
+  #     responses:
+  #       "201":
+  #         description: Success
+  #         schema:
+  #           $ref: "#/definitions/GetVideoGameResponse"
+  #       default:
+  #         description: Error
+  #         schema:
+  #           $ref: "#/definitions/ErrorResponse"
+  # /videogames/{id}:
+    # x-swagger-router-controller: game.controller
+    # get:
+    #   description: get a videogmae
+    #   parameters:
+    #     - name: id
+    #       type: number
+    #       in: path
+    #       required: true
+    #   responses:
+    #     "200":
+    #       description: Success
+    #       schema:
+    #         $ref: "#/definitions/GetVideoGameResponse"
+    #     default:
+    #       description: Error
+    #       schema:
+    #         $ref: "#/definitions/ErrorResponse"
+    # put:
+    #   description: update a video game
+    #   # define the parameters
+    #   parameters:
+    #     - name: id
+    #       description: videogame id
+    #       type: number
+    #       in: path
+    #       required: true
+    #     - in: body
+    #       name: videogame
+    #       description: The videogame to update.
+    #       schema:
+    #         $ref: "#/definitions/VideoGame"
+    #   responses:
+    #     "200":
+    #       description: Success
+    #       schema:
+    #         $ref: "#/definitions/GetVideoGameResponse"
+    #     default:
+    #       description: Error
+    #       schema:
+    #         $ref: "#/definitions/ErrorResponse"  
+    # delete:
+    #   description: delete a videogame
+    #   # define the parameters
+    #   parameters:
+    #     - name: id
+    #       description: videogame id
+    #       type: number
+    #       in: path
+    #       required: true
+    #   responses:
+    #     "200":
+    #       description: Success
+    #       schema:
+    #         $ref: "#/definitions/GeneralResponse"
+    #     default:
+    #       description: Error
+    #       schema:
+    #         $ref: "#/definitions/ErrorResponse"
   
   /swagger:
     x-swagger-pipe: swagger_raw
