@@ -319,69 +319,69 @@ definitions:
         type: string
     required:
       - message
-  VideoGame:
-    type: object
-    properties:
-      name:
-        type: string
-        description: Name of the game
-      developer:
-        type: string
-        description: Developer/Publisher of the game
-      gamesystem:
-        type: string
-        description: Name of the game system
-      genre:
-        type: string
-        description: Name of the genre/style of the game
-      year:
-        type: number
-        description: Release year
-      image:
-        type: string
-        format: byte
-    required:
-      - name
-      - developer
-      - gamesystem
-      - genre
-      - year
-  GetVideoGameResponse:
-    type: object
-    properties:
-      id:
-        type: number
-        description: identifier
-      name:
-        type: string
-        description: Name of the game
-      developer:
-        type: string
-        description: Developer of the game
-      gamesystem:
-        type: string
-        description: Name of the game system
-      genre:
-        type: string
-        description: Name of the genre of the game
-      year:
-        type: number
-        description: Release year
-      image:
-        type: string
-        format: byte
-    required:
-      - id
-      - name
-      - developer
-      - gamesystem
-      - genre
-      - year
-  GetVideoGameListResponse:
-    required:
-      - videogames
-    properties:
-      videogames:
-        type: array
-        items:
-          $ref: "#/definitions/GetVideoGameResponse"
+  # VideoGame:
+  #   type: object
+  #   properties:
+  #     name:
+  #       type: string
+  #       description: Name of the game
+  #     developer:
+  #       type: string
+  #       description: Developer/Publisher of the game
+  #     gamesystem:
+  #       type: string
+  #       description: Name of the game system
+  #     genre:
+  #       type: string
+  #       description: Name of the genre/style of the game
+  #     year:
+  #       type: number
+  #       description: Release year
+  #     image:
+  #       type: string
+  #       format: byte
+  #   required:
+  #     - name
+  #     - developer
+  #     - gamesystem
+  #     - genre
+  #     - year
+  # GetVideoGameResponse:
+  #   type: object
+  #   properties:
+  #     id:
+  #       type: number
+  #       description: identifier
+  #     name:
+  #       type: string
+  #       description: Name of the game
+  #     developer:
+  #       type: string
+  #       description: Developer of the game
+  #     gamesystem:
+  #       type: string
+  #       description: Name of the game system
+  #     genre:
+  #       type: string
+  #       description: Name of the genre of the game
+  #     year:
+  #       type: number
+  #       description: Release year
+  #     image:
+  #       type: string
+  #       format: byte
+  #   required:
+  #     - id
+  #     - name
+  #     - developer
+  #     - gamesystem
+  #     - genre
+  #     - year
+  # GetVideoGameListResponse:
+  #   required:
+  #     - videogames
+  #   properties:
+      # videogames:
+      #   type: array
+      #   items:
+      #     $ref: "#/definitions/GetVideoGameResponse"
